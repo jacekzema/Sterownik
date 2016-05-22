@@ -11,6 +11,7 @@ class Czujnik : public Obiekt
         Czujnik(string &nazwa,float &temp,float &cisn, float &wilg);
         virtual ~Czujnik();
         void pokaz_parametry();
+        void pokaz_mnie();
 
         void on();
         void off();

@@ -7,7 +7,6 @@ Czujnik::Czujnik(string &nazwa, float &temp, float &cisn, float &wilg)
     wilgotnosc = &wilg;
     name = &nazwa;
     //cout <<nazwa<<" T: "<< temp <<" C: "<<cisn<<" Wilg: "<<wilg <<endl;
-
     //ctor
 }
 
@@ -56,4 +55,9 @@ void Czujnik::pokaz_parametry()
     //{
     //    cout<<"Czujnik "<<name<<" jest wylaczony"<<endl;
     //}
+}
+
+void Czujnik::pokaz_mnie()
+{
+    cout<<"Czujnik"<<endl;
 }

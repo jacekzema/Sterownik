@@ -44,6 +44,8 @@ void Interfejs::co_chcesz_zrobic()
 		break;
 
 	case '4':
+        system("cls");
+	    pokaz_obiekty_w_pomieszczeniach();
 		break;
 
 	default:
@@ -207,5 +209,49 @@ void Interfejs::pokaz_pomieszczenia()
 
 void Interfejs::pokaz_obiekty_w_pomieszczeniach()
 {
+    string znak;
+    unsigned int liczba;
+    unsigned int i;
+    cout <<"Skad chcesz zobaczyc obiekty?"<<endl;
+    for(i=0;i<pomieszczenia.size();i++)
+    {
+        cout<<i+1<<".";
+        pomieszczenia.at(i) -> przedstaw_sie();
+    }
+
+    cout<<i+1<<".";
+    cout<<" Wroc do poprzedniego menu"<<endl;
+    cin >> znak;
+    liczba=atoi(znak.c_str());
+    cout << liczba<<endl;
+
+    if((liczba-1)== pomieszczenia.size())
+    {
+        system("cls");
+        co_chcesz_zrobic();
+    }
+
+    if((liczba-1) >= pomieszczenia.size())
+    {
+        cerr<<"Nie ma takiego obiektu!"<<endl;
+    }
+
+    else
+    {
+        for(unsigned int x=0;x<pomieszczenia.at(liczba-1)->obiekty.size();x++)
+        {
+            cout<<x+1<<".";
+            pomieszczenia.at(liczba-1)->obiekty.at(x) -> pokaz_mnie();
+        }
+
+        //pomieszczenia.at(liczba-1)->obiekty.at(0)->pokaz_parametry();
+
+    }
+
+    cout<<""<<endl;
+    cout << "Aby przejsc dalej, nacisnij dolowny klawisz" << endl;
+    _getch();
+    system("cls");
+    co_chcesz_zrobic();
 
 }

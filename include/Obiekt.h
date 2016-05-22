@@ -16,6 +16,7 @@ class Obiekt
         Obiekt();
         virtual ~Obiekt();
         virtual void pokaz_parametry()=0;
+        virtual void pokaz_mnie()=0;
         virtual void on()=0;
         virtual void off()=0;
 

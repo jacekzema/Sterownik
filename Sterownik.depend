@@ -49,13 +49,13 @@
 1463950782 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
 	"Interfejs.h"
 
-1463949806 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
+1463951748 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
 	"Czujnik.h"
 
-1463934647 d:\jacek\nauka_c++\sterownik\include\czujnik.h
+1463951777 d:\jacek\nauka_c++\sterownik\include\czujnik.h
 	<Obiekt.h>
 
-1463935179 d:\jacek\nauka_c++\sterownik\include\obiekt.h
+1463951653 d:\jacek\nauka_c++\sterownik\include\obiekt.h
 	"Czujnik.h"
 	<iostream>
 
