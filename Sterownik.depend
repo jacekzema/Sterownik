@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1463915176 source:d:\jacek\nauka_c++\sterownik\main.cpp
+1463950637 source:d:\jacek\nauka_c++\sterownik\main.cpp
 	<iostream>
 	<Interfejs.h>
 
@@ -31,25 +31,25 @@
 1463917218 d:\jacek\nauka_c++\sterownik\include\sypialnia.h
 	<Pomieszczenie.h>
 
-1463935103 source:d:\jacek\nauka_c++\sterownik\src\kuchnia.cpp
+1463949806 source:d:\jacek\nauka_c++\sterownik\src\kuchnia.cpp
 	"Kuchnia.h"
 
-1463935303 source:d:\jacek\nauka_c++\sterownik\src\lazienka.cpp
+1463949806 source:d:\jacek\nauka_c++\sterownik\src\lazienka.cpp
 	"Lazienka.h"
 
-1463935303 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
+1463949807 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
 	"Pokoj.h"
 
 1463914269 source:d:\jacek\nauka_c++\sterownik\src\pomieszczenie.cpp
 	"Pomieszczenie.h"
 
-1463935303 source:d:\jacek\nauka_c++\sterownik\src\sypialnia.cpp
+1463950614 source:d:\jacek\nauka_c++\sterownik\src\sypialnia.cpp
 	"Sypialnia.h"
 
-1463917561 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
+1463950782 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
 	"Interfejs.h"
 
-1463934854 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
+1463949806 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
 	"Czujnik.h"
 
 1463934647 d:\jacek\nauka_c++\sterownik\include\czujnik.h

@@ -12,9 +12,9 @@ Sypialnia::Sypialnia(string n, float t, float c, float w)
 
     obiekty.push_back(new Czujnik(name,temperatura,cisnienie,wilgotnosc));
 	//Czujnik *czujnik = new Czujnik(name,temperatura,cisnienie,wilgotnosc);
-	obiekty.at(0)->pokaz_parametry();
-	temperatura = 15;
-	obiekty.at(0)->pokaz_parametry();
+	//obiekty.at(0)->pokaz_parametry();
+	//temperatura = 15;
+	//obiekty.at(0)->pokaz_parametry();
 	return;
     //ctor
 }

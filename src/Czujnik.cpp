@@ -6,7 +6,7 @@ Czujnik::Czujnik(string &nazwa, float &temp, float &cisn, float &wilg)
     cisnienie = &cisn;
     wilgotnosc = &wilg;
     name = &nazwa;
-    cout <<nazwa<<" T: "<< temp <<" C: "<<cisn<<" Wilg: "<<wilg <<endl;
+    //cout <<nazwa<<" T: "<< temp <<" C: "<<cisn<<" Wilg: "<<wilg <<endl;
 
     //ctor
 }
