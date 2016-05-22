@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Sterownik" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Sterownik" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Sterownik" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Czujnik.h" />
+		<Unit filename="include/Interfejs.h" />
+		<Unit filename="include/Kuchnia.h" />
+		<Unit filename="include/Lazienka.h" />
+		<Unit filename="include/Obiekt.h" />
+		<Unit filename="include/Pokoj.h" />
+		<Unit filename="include/Pomieszczenie.h" />
+		<Unit filename="include/Sypialnia.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Czujnik.cpp" />
+		<Unit filename="src/Interfejs.cpp" />
+		<Unit filename="src/Kuchnia.cpp" />
+		<Unit filename="src/Lazienka.cpp" />
+		<Unit filename="src/Obiekt.cpp" />
+		<Unit filename="src/Pokoj.cpp" />
+		<Unit filename="src/Pomieszczenie.cpp" />
+		<Unit filename="src/Sypialnia.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

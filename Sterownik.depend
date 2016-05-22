@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1463915176 source:d:\jacek\nauka_c++\sterownik\main.cpp
+	<iostream>
+	<Interfejs.h>
+
+1463935424 d:\jacek\nauka_c++\sterownik\include\interfejs.h
+	<iostream>
+	<conio.h>
+	<vector>
+	<stdlib.h>
+	"Pomieszczenie.h"
+
+1463922802 d:\jacek\nauka_c++\sterownik\include\pomieszczenie.h
+	<iostream>
+	"Kuchnia.h"
+	"Pokoj.h"
+	"Lazienka.h"
+	"Sypialnia.h"
+	<vector>
+	"Obiekt.h"
+
+1463933288 d:\jacek\nauka_c++\sterownik\include\kuchnia.h
+	<Pomieszczenie.h>
+
+1463917218 d:\jacek\nauka_c++\sterownik\include\pokoj.h
+	<Pomieszczenie.h>
+
+1463917218 d:\jacek\nauka_c++\sterownik\include\lazienka.h
+	<Pomieszczenie.h>
+
+1463917218 d:\jacek\nauka_c++\sterownik\include\sypialnia.h
+	<Pomieszczenie.h>
+
+1463935103 source:d:\jacek\nauka_c++\sterownik\src\kuchnia.cpp
+	"Kuchnia.h"
+
+1463935303 source:d:\jacek\nauka_c++\sterownik\src\lazienka.cpp
+	"Lazienka.h"
+
+1463935303 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
+	"Pokoj.h"
+
+1463914269 source:d:\jacek\nauka_c++\sterownik\src\pomieszczenie.cpp
+	"Pomieszczenie.h"
+
+1463935303 source:d:\jacek\nauka_c++\sterownik\src\sypialnia.cpp
+	"Sypialnia.h"
+
+1463917561 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
+	"Interfejs.h"
+
+1463934854 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
+	"Czujnik.h"
+
+1463934647 d:\jacek\nauka_c++\sterownik\include\czujnik.h
+	<Obiekt.h>
+
+1463935179 d:\jacek\nauka_c++\sterownik\include\obiekt.h
+	"Czujnik.h"
+	<iostream>
+
+1463935179 source:d:\jacek\nauka_c++\sterownik\src\obiekt.cpp
+	"Obiekt.h"
+
