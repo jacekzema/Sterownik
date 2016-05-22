@@ -127,8 +127,8 @@ void Interfejs::pokaz_pomieszczenia()
 
             cin >> znak;
             liczba=atoi(znak.c_str());
-            cout << liczba<<endl;
-            if((liczba-1) > pomieszczenia.size())
+            //cout << liczba<<endl;  //pokazuje jaka liczbaa!
+            if((liczba-1) >= pomieszczenia.size())
             {
                 cerr<<"Nie ma takiego obiektu!"<<endl;
 
