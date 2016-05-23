@@ -2,6 +2,7 @@
 
 Obiekt::Obiekt()
 {
+
     //ctor
 }
 
@@ -9,3 +10,4 @@ Obiekt::~Obiekt()
 {
     //dtor
 }
+

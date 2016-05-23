@@ -2,6 +2,9 @@
 #define CZUJNIK_H
 
 #include <Obiekt.h>
+#include <vector>
+#include <conio.h>
+#include <stdlib.h>
 
 
 class Czujnik : public Obiekt
@@ -12,9 +15,10 @@ class Czujnik : public Obiekt
         virtual ~Czujnik();
         void pokaz_parametry();
         void pokaz_mnie();
-
         void on();
         void off();
+        void moje_komendy();
+
 
     protected:
 

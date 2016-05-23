@@ -3,21 +3,24 @@
 	<iostream>
 	<Interfejs.h>
 
-1463935424 d:\jacek\nauka_c++\sterownik\include\interfejs.h
+1463992635 d:\jacek\nauka_c++\sterownik\include\interfejs.h
 	<iostream>
 	<conio.h>
 	<vector>
 	<stdlib.h>
 	"Pomieszczenie.h"
+	"Obiekt.h"
 
-1463922802 d:\jacek\nauka_c++\sterownik\include\pomieszczenie.h
+1463997559 d:\jacek\nauka_c++\sterownik\include\pomieszczenie.h
 	<iostream>
 	"Kuchnia.h"
 	"Pokoj.h"
 	"Lazienka.h"
 	"Sypialnia.h"
-	<vector>
 	"Obiekt.h"
+	<vector>
+	<conio.h>
+	<stdlib.h>
 
 1463933288 d:\jacek\nauka_c++\sterownik\include\kuchnia.h
 	<Pomieszczenie.h>
@@ -37,28 +40,39 @@
 1463949806 source:d:\jacek\nauka_c++\sterownik\src\lazienka.cpp
 	"Lazienka.h"
 
-1463949807 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
+1463991066 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
 	"Pokoj.h"
 
-1463914269 source:d:\jacek\nauka_c++\sterownik\src\pomieszczenie.cpp
+1463998032 source:d:\jacek\nauka_c++\sterownik\src\pomieszczenie.cpp
 	"Pomieszczenie.h"
 
 1463950614 source:d:\jacek\nauka_c++\sterownik\src\sypialnia.cpp
 	"Sypialnia.h"
 
-1463950782 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
+1464002045 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
 	"Interfejs.h"
 
-1463951748 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
+1464000969 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
 	"Czujnik.h"
 
-1463951777 d:\jacek\nauka_c++\sterownik\include\czujnik.h
+1463999301 d:\jacek\nauka_c++\sterownik\include\czujnik.h
 	<Obiekt.h>
+	<vector>
+	<conio.h>
+	<stdlib.h>
 
-1463951653 d:\jacek\nauka_c++\sterownik\include\obiekt.h
+1463997218 d:\jacek\nauka_c++\sterownik\include\obiekt.h
 	"Czujnik.h"
+	"Klimatyzacja.h"
+	<vector>
 	<iostream>
 
-1463935179 source:d:\jacek\nauka_c++\sterownik\src\obiekt.cpp
+1463997218 source:d:\jacek\nauka_c++\sterownik\src\obiekt.cpp
 	"Obiekt.h"
+
+1464000969 source:d:\jacek\nauka_c++\sterownik\src\klimatyzacja.cpp
+	"Klimatyzacja.h"
+
+1463991152 d:\jacek\nauka_c++\sterownik\include\klimatyzacja.h
+	<Obiekt.h>
 

@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/Czujnik.h" />
 		<Unit filename="include/Interfejs.h" />
+		<Unit filename="include/Klimatyzacja.h" />
 		<Unit filename="include/Kuchnia.h" />
 		<Unit filename="include/Lazienka.h" />
 		<Unit filename="include/Obiekt.h" />
@@ -45,6 +46,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Czujnik.cpp" />
 		<Unit filename="src/Interfejs.cpp" />
+		<Unit filename="src/Klimatyzacja.cpp" />
 		<Unit filename="src/Kuchnia.cpp" />
 		<Unit filename="src/Lazienka.cpp" />
 		<Unit filename="src/Obiekt.cpp" />

@@ -3,6 +3,7 @@
 #include <vector>
 #include <stdlib.h>
 #include "Pomieszczenie.h"
+#include "Obiekt.h"
 using namespace std;
 #ifndef INTERFEJS_H
 #define INTERFEJS_H
@@ -19,6 +20,7 @@ class Interfejs
         void dodaj_obiekt();
         void pokaz_pomieszczenia();
         void pokaz_obiekty_w_pomieszczeniach();
+        void wylacz_all();
 
     protected:
         vector <Pomieszczenie*> pomieszczenia;

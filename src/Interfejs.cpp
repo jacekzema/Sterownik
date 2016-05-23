@@ -2,8 +2,10 @@
 
 Interfejs::Interfejs()
 {
-    cout << "Witaj w inteligentnym mieszkaniu" << endl;
+    cout << "---------------------------------------------------------" << endl;
+    cout << "Witaj w sterowniku mieszkania!" << endl;
 	cout << "Aby przejsc dalej, nacisnij dolowny klawisz" << endl;
+    cout << "---------------------------------------------------------" << endl;
 	_getch();
 	system("cls");
 	co_chcesz_zrobic();
@@ -17,11 +19,15 @@ Interfejs::~Interfejs()
 void Interfejs::co_chcesz_zrobic()
 {
 	char s;
+    cout << "---------------------------------------------------------" << endl;
 	cout << "Co chcesz zrobic? Nacisnij odpowiedni przycisk" << endl;
+    cout << "---------------------------------------------------------" << endl;
 	cout << "1. Dodaj pomieszczenie" << endl;
 	cout << "2. Dodaj obiekt w pomieszczeniu" << endl;
 	cout << "3. Pokaz informacje(temperature,cisnienie,wilgotnosc)" << endl;
 	cout << "4. Sprawdz obiekty w pomieszczeniach" << endl;
+    cout << "5. Wylacz wszystkie urzadzenia!" << endl;
+    cout << "---------------------------------------------------------" << endl;
 
 	s = _getch();
 
@@ -48,6 +54,11 @@ void Interfejs::co_chcesz_zrobic()
 	    pokaz_obiekty_w_pomieszczeniach();
 		break;
 
+    case '5':
+        system("cls");
+	    wylacz_all();
+		break;
+
 	default:
 		system("cls");
 		cout << "Wybrano nieznana komende, wybierz jeszcze raz" << endl;
@@ -61,11 +72,13 @@ void Interfejs::co_chcesz_zrobic()
 void Interfejs::dodaj_pomieszczenie()
 {
 	char pom;
+    cout << "---------------------------------------------------------" << endl;
 	cout << "1. Dodaj pokoj" << endl;
 	cout << "2. Dodaj sypialnie" << endl;
 	cout << "3. Dodaj lazienke" << endl;
 	cout << "4. Dodaj kuchnie" << endl;
 	cout << "5. Powrot do glownego menu" << endl;
+    cout << "---------------------------------------------------------" << endl;
 	pom = _getch();
 
 	switch (pom)
@@ -111,10 +124,20 @@ void Interfejs::dodaj_pomieszczenie()
 
 void Interfejs::dodaj_obiekt()
 {
+      while(pomieszczenia.size()==0)
+    {
+        cout<<"Nie ma pomieszczen, wiec gdzie chcesz dodac obiekt?"<<endl;
+        cout<<"Nacisnij klawisz by kontynuowac"<<endl;
+        _getch();
+        system("cls");
+        co_chcesz_zrobic();
+    }
     string znak;
     unsigned int liczba;
     unsigned int i;
+    cout << "---------------------------------------------------------" << endl;
     cout <<"Gdzie chcesz dodac obiekt?"<<endl;
+    cout << "---------------------------------------------------------" << endl;
     for(i=0;i<pomieszczenia.size();i++)
     {
         cout<<i+1<<".";
@@ -122,8 +145,10 @@ void Interfejs::dodaj_obiekt()
     }
 
     cout<<i+1<<".";
-    cout<<" Wroc do poprzedniego menu"<<endl;
+    cout<<"Wroc do poprzedniego menu"<<endl;
+    cout << "---------------------------------------------------------" << endl;
     cin >> znak;
+    cout << "---------------------------------------------------------" << endl;
     liczba=atoi(znak.c_str());
 
     if((liczba-1)== pomieszczenia.size())
@@ -139,17 +164,30 @@ void Interfejs::dodaj_obiekt()
 
     else
     {
-        pomieszczenia.at(liczba-1)->obiekty.at(0)->pokaz_parametry();
+        pomieszczenia.at(liczba-1)->dodaj_przedmiot();
 
     }
+        //lista_obiektow();
 
-    cout<<""<<endl;
+
+
+       /* for(unsigned int x=0;x<pomieszczenia.at(liczba-1)->obiekty.size();x++)
+        {
+            cout<<x+1<<".";
+          //  pomieszczenia.at(liczba-1)->obiekty.push_back(New)
+        }
+
+
+        //pomieszczenia.at(liczba-1)->obiekty.at(0)->pokaz_parametry();
+        */
+    //cout<<""<<endl;
     cout << "Aby przejsc dalej, nacisnij dolowny klawisz" << endl;
     _getch();
     system("cls");
     co_chcesz_zrobic();
 
-}
+    }
+
 
 void Interfejs::pokaz_pomieszczenia()
 {
@@ -164,14 +202,17 @@ void Interfejs::pokaz_pomieszczenia()
      string znak;
      unsigned int liczba;
      unsigned int i;
+     cout << "---------------------------------------------------------" << endl;
      cout <<"Z ktorego pomieszczenia pokazac informacje?"<<endl;
+     cout << "---------------------------------------------------------" << endl;
      for(i=0;i<pomieszczenia.size();i++)
     {
         cout<<i+1<<".";
         pomieszczenia.at(i) -> przedstaw_sie();
     }
     cout<<i+1<<".";
-    cout<<" Wroc do poprzedniego menu"<<endl;
+    cout<<"Wroc do poprzedniego menu"<<endl;
+    cout << "---------------------------------------------------------" << endl;
 
     cin >> znak;
     liczba=atoi(znak.c_str());
@@ -209,10 +250,23 @@ void Interfejs::pokaz_pomieszczenia()
 
 void Interfejs::pokaz_obiekty_w_pomieszczeniach()
 {
+    while(pomieszczenia.size()==0)
+    {
+        cout<<"Nie ma pomieszczen, wiec co chcesz zobaczyc?"<<endl;
+        cout<<"Nacisnij klawisz by kontynuowac"<<endl;
+        _getch();
+        system("cls");
+        co_chcesz_zrobic();
+    }
+
+    cout << "---------------------------------------------------------" << endl;
+    cout <<"Skad chcesz zobaczyc obiekty?"<<endl;
+    cout << "---------------------------------------------------------" << endl;
+
     string znak;
     unsigned int liczba;
     unsigned int i;
-    cout <<"Skad chcesz zobaczyc obiekty?"<<endl;
+
     for(i=0;i<pomieszczenia.size();i++)
     {
         cout<<i+1<<".";
@@ -220,10 +274,11 @@ void Interfejs::pokaz_obiekty_w_pomieszczeniach()
     }
 
     cout<<i+1<<".";
-    cout<<" Wroc do poprzedniego menu"<<endl;
+    cout<<"Wroc do poprzedniego menu"<<endl;
+    cout << "---------------------------------------------------------" << endl;
     cin >> znak;
+    cout << "---------------------------------------------------------" << endl;
     liczba=atoi(znak.c_str());
-    cout << liczba<<endl;
 
     if((liczba-1)== pomieszczenia.size())
     {
@@ -238,20 +293,106 @@ void Interfejs::pokaz_obiekty_w_pomieszczeniach()
 
     else
     {
-        for(unsigned int x=0;x<pomieszczenia.at(liczba-1)->obiekty.size();x++)
+        unsigned int x;
+        for(x=0;x<pomieszczenia.at(liczba-1)->obiekty.size();x++)
         {
             cout<<x+1<<".";
             pomieszczenia.at(liczba-1)->obiekty.at(x) -> pokaz_mnie();
+
         }
+
+        cout << "---------------------------------------------------------" << endl;
+        cout<<"Jesli chcesz zrobic cos na obiekcie, wybierz odpowiedni numer"<<endl;
+        cout<<"W przeciwnym wypadku wcisnij: "<< pomieszczenia.at(liczba-1)->obiekty.size()+1 <<endl;
+        cout << "---------------------------------------------------------" << endl;
+
+        string znak1;
+        unsigned int liczba1;
+        cin >> znak1;
+        liczba1=atoi(znak1.c_str());
+
+            if((liczba1-1) ==  pomieszczenia.at(liczba-1)->obiekty.size())
+            {
+                cout<<""<<endl;
+                cout << "Aby przejsc dalej, nacisnij dolowny klawisz" << endl;
+                _getch();
+                system("cls");
+                co_chcesz_zrobic();
+            }
+
+            if((liczba-1) >=  pomieszczenia.at(liczba-1)->obiekty.size())
+            {
+                cerr<<"Nie ma takiego obiektu!"<<endl;
+            }
+
+            else
+            {
+                pomieszczenia.at(liczba-1)->obiekty.at(liczba1-1) -> moje_komendy();
+            }
+
+
+
+    cout << "---------------------------------------------------------" << endl;
+
 
         //pomieszczenia.at(liczba-1)->obiekty.at(0)->pokaz_parametry();
 
     }
 
-    cout<<""<<endl;
-    cout << "Aby przejsc dalej, nacisnij dolowny klawisz" << endl;
-    _getch();
+
+    co_chcesz_zrobic();
+}
+
+void Interfejs::wylacz_all()
+{
+    char pom;
+    system("cls");
+    cout<<"Czy jestes pewnien ze chcesz wszystko wylaczyc?"<<endl;
+    cout<<"Jesli tak, wcisnij Y, nacisniecie innego przycisku spowoduje powrot"<<endl;
+
+    pom = _getch();
+
+	switch (pom)
+	{
+	case 'y':
+		system("cls");
+		unsigned int i;
+		cout << "---------------------------------------------------------" << endl;
+        for(i=0;i<pomieszczenia.size();i++)
+        {
+            for(unsigned int x=0;x<pomieszczenia.at(i)->obiekty.size();x++)
+            {
+                pomieszczenia.at(i)->obiekty.at(x) -> off();
+            }
+        }
+        cout << "---------------------------------------------------------" << endl;
+
+		break;
+
+    case 'Y':
+		system("cls");
+		cout << "---------------------------------------------------------" << endl;
+        for(i=0;i<pomieszczenia.size();i++)
+        {
+            for(unsigned int x=0;x<pomieszczenia.at(i)->obiekty.size();x++)
+            {
+                pomieszczenia.at(i)->obiekty.at(x) -> off();
+            }
+        }
+        cout << "---------------------------------------------------------" << endl;
+
+		break;
+
+    default:
+		system("cls");
+		co_chcesz_zrobic();
+		break;
+	}
+    cout<<"Nacisnij dowolny klawisz by przejsc dalej"<<endl;
+	_getch();
     system("cls");
     co_chcesz_zrobic();
 
 }
+
+
