@@ -26,6 +26,7 @@ Pokoj::Pokoj(string n, float t, float c, float w)
 
 Pokoj::~Pokoj()
 {
+    cout<<"Usunieto pokoj : "<<name<<endl;
     //dtor
 }
 

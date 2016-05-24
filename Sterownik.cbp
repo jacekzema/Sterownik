@@ -42,7 +42,9 @@
 		<Unit filename="include/Obiekt.h" />
 		<Unit filename="include/Pokoj.h" />
 		<Unit filename="include/Pomieszczenie.h" />
+		<Unit filename="include/Pralka.h" />
 		<Unit filename="include/Sypialnia.h" />
+		<Unit filename="include/Telewizor.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Czujnik.cpp" />
 		<Unit filename="src/Interfejs.cpp" />
@@ -52,7 +54,9 @@
 		<Unit filename="src/Obiekt.cpp" />
 		<Unit filename="src/Pokoj.cpp" />
 		<Unit filename="src/Pomieszczenie.cpp" />
+		<Unit filename="src/Pralka.cpp" />
 		<Unit filename="src/Sypialnia.cpp" />
+		<Unit filename="src/Telewizor.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

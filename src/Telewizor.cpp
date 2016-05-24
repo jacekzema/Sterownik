@@ -1,88 +1,91 @@
-#include "Klimatyzacja.h"
+#include "Telewizor.h"
 
-Klimatyzacja::Klimatyzacja(string &nazwa,float &temp)
+Telewizor::Telewizor(string &nazwa)
 {
     czy_wlaczone=0;
-    temperatura = &temp;
     name = &nazwa;
     //ctor
-
 }
 
-Klimatyzacja::~Klimatyzacja()
+Telewizor::~Telewizor()
 {
-    cout<<"Usunieto klime: "<<name<<endl;
+    cout<<"Usunieto telewizor w: "<<*name<<endl;
+    //dtor
 }
 
-void Klimatyzacja::pokaz_parametry()
+void Telewizor::pokaz_parametry()
 {
 }
 
-void Klimatyzacja::pokaz_mnie()
+void Telewizor::pokaz_mnie()
 {
     if (czy_wlaczone==1)
     {
-        cout<<"Klima w "<<*name<<" (ON)"<<endl;
+        cout<<"Telewizor w "<<*name<<" (ON)"<<endl;
     }
     else
     {
-         cout<<"Klima w "<<*name<<" (OFF)"<<endl;
+         cout<<"Telewizor w "<<*name<<" (OFF)"<<endl;
     }
 }
-void Klimatyzacja::ustaw_temperure()
+void Telewizor::ustaw_program()
 {
         if (czy_wlaczone==0)
     {
-        cout<<"Musisz wlaczyc klime!"<<endl;
+        cout<<"Musisz wlaczyc telewizor aby ustawic kanal!"<<endl;
 
     }
     else
     {
-    cout<<"Wprowadz temperature od 0 do 40 stopni"<<endl;
-    float x;
+    system("cls");
+    cout << "---------------------------------------------------------" << endl;
+    cout<<"Wprowadz program od 0 do 999"<<endl;
+    cout << "---------------------------------------------------------" << endl;
+
+    int x;
     cin >> x;
-    if(x >=0 && x <= 40)
+    if(x >= 0 || x<= 999)
     {
-        *temperatura = x;
-        cout<<"Ustawiono nowe temperature: "<<*temperatura<< " w:"<<*name<<endl;
+        cout<<"Wlaczono program nr: "<<x<<" w:"<<*name<<endl;
     }
     else
     {
+
         cout<<"Cos poszlo nie tak, spobuj jeszcze raz!"<<endl;
         cout<<"Nacisnij dowolny klawisz by kontynuowac"<<endl;
         _getch();
-        ustaw_temperure();
+        ustaw_program();
     }
     }
 
 
 }
-void Klimatyzacja::on()
+void Telewizor::on()
 {
     if (czy_wlaczone==0)
     {
         czy_wlaczone=1;
-        cout<<"Wlaczono klimatyzacje"<<endl;
-        ustaw_temperure();
+        cout<<"Wlaczono telewizor"<<endl;
+        ustaw_program();
 
     }
     else
     {
-        cout<<"Klimatyzacja juz jest wlaczona"<<endl;
+        cout<<"Telewizor juz jest wlaczona"<<endl;
     }
 
 
 }
-void Klimatyzacja::off()
+void Telewizor::off()
 {
     if (czy_wlaczone==1)
     {
         czy_wlaczone=0;
-        cout<<"Wylaczono klimatyzacje: "<< *name<<endl;
+        cout<<"Wylaczono Telewizor: "<< *name<<endl;
     }
     else
     {
-        cout<<"Klimatyzacja juz jest wylaczona: "<<*name<<endl;
+        cout<<"Telewizor juz jest wylaczona: "<<*name<<endl;
     }
     /*
     cout<<"Czy chcesz cos zrobic z klimatyzacja?"<<endl;
@@ -108,15 +111,15 @@ void Klimatyzacja::off()
 
 }
 
-void Klimatyzacja::moje_komendy()
+void Telewizor::moje_komendy()
 {
     system("cls");
     char s;
     cout << "---------------------------------------------------------" << endl;
-    cout<<"Co chcesz zrobiæ z klimatyzacja w: "<<*name<<endl;
+    cout<<"Co chcesz zrobic z Telewizorem w: "<<*name<<endl;
     cout << "1. Wlacz" << endl;
 	cout << "2. Wylacz " << endl;
-	cout << "3. Ustaw temperature" << endl;
+	cout << "3. Ustaw program" << endl;
 	cout << "4. Powrot do menu glownego" << endl;
     cout << "---------------------------------------------------------" << endl;
     s = _getch();
@@ -133,7 +136,7 @@ void Klimatyzacja::moje_komendy()
 		break;
     case '3':
 		system("cls");
-		ustaw_temperure();
+		ustaw_program();
 		break;
     case '4':
 		system("cls");

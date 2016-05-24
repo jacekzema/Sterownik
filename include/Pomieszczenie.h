@@ -3,6 +3,8 @@
 #include "Pokoj.h"
 #include "Lazienka.h"
 #include "Sypialnia.h"
+#include "Pralka.h"
+#include "Telewizor.h"
 
 #include "Obiekt.h"
 #include <vector>

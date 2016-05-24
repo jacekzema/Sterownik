@@ -13,7 +13,8 @@ Czujnik::Czujnik(string &nazwa, float &temp, float &cisn, float &wilg)
 
 Czujnik::~Czujnik()
 {
-    //dtor
+    cout<<"Usunieto czujnik: "<<name<<endl;
+
 }
 
 void Czujnik::on()
@@ -96,7 +97,7 @@ void Czujnik::moje_komendy()
     system("cls");
     char s;
     cout << "---------------------------------------------------------" << endl;
-    cout<<"Co chcesz zrobiæ z czujnikiem w: "<<*name<<endl;
+    cout << "Co chcesz zrobiæ z czujnikiem w: "<<*name<<endl;
     cout << "1. Pokaz dane" << endl;
 	cout << "2. Wlacz " << endl;
 	cout << "3. Wylacz" << endl;

@@ -3,7 +3,7 @@
 	<iostream>
 	<Interfejs.h>
 
-1463992635 d:\jacek\nauka_c++\sterownik\include\interfejs.h
+1464040510 d:\jacek\nauka_c++\sterownik\include\interfejs.h
 	<iostream>
 	<conio.h>
 	<vector>
@@ -11,12 +11,14 @@
 	"Pomieszczenie.h"
 	"Obiekt.h"
 
-1463997559 d:\jacek\nauka_c++\sterownik\include\pomieszczenie.h
+1464038331 d:\jacek\nauka_c++\sterownik\include\pomieszczenie.h
 	<iostream>
 	"Kuchnia.h"
 	"Pokoj.h"
 	"Lazienka.h"
 	"Sypialnia.h"
+	"Pralka.h"
+	"Telewizor.h"
 	"Obiekt.h"
 	<vector>
 	<conio.h>
@@ -34,25 +36,25 @@
 1463917218 d:\jacek\nauka_c++\sterownik\include\sypialnia.h
 	<Pomieszczenie.h>
 
-1463949806 source:d:\jacek\nauka_c++\sterownik\src\kuchnia.cpp
+1464039377 source:d:\jacek\nauka_c++\sterownik\src\kuchnia.cpp
 	"Kuchnia.h"
 
-1463949806 source:d:\jacek\nauka_c++\sterownik\src\lazienka.cpp
+1464039377 source:d:\jacek\nauka_c++\sterownik\src\lazienka.cpp
 	"Lazienka.h"
 
-1463991066 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
+1464039329 source:d:\jacek\nauka_c++\sterownik\src\pokoj.cpp
 	"Pokoj.h"
 
-1463998032 source:d:\jacek\nauka_c++\sterownik\src\pomieszczenie.cpp
+1464039316 source:d:\jacek\nauka_c++\sterownik\src\pomieszczenie.cpp
 	"Pomieszczenie.h"
 
-1463950614 source:d:\jacek\nauka_c++\sterownik\src\sypialnia.cpp
+1464039148 source:d:\jacek\nauka_c++\sterownik\src\sypialnia.cpp
 	"Sypialnia.h"
 
-1464002045 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
+1464080042 source:d:\jacek\nauka_c++\sterownik\src\interfejs.cpp
 	"Interfejs.h"
 
-1464000969 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
+1464039552 source:d:\jacek\nauka_c++\sterownik\src\czujnik.cpp
 	"Czujnik.h"
 
 1463999301 d:\jacek\nauka_c++\sterownik\include\czujnik.h
@@ -67,12 +69,24 @@
 	<vector>
 	<iostream>
 
-1463997218 source:d:\jacek\nauka_c++\sterownik\src\obiekt.cpp
+1464039552 source:d:\jacek\nauka_c++\sterownik\src\obiekt.cpp
 	"Obiekt.h"
 
-1464000969 source:d:\jacek\nauka_c++\sterownik\src\klimatyzacja.cpp
+1464039377 source:d:\jacek\nauka_c++\sterownik\src\klimatyzacja.cpp
 	"Klimatyzacja.h"
 
 1463991152 d:\jacek\nauka_c++\sterownik\include\klimatyzacja.h
 	<Obiekt.h>
+
+1464039161 source:d:\jacek\nauka_c++\sterownik\src\pralka.cpp
+	"Pralka.h"
+
+1464037296 d:\jacek\nauka_c++\sterownik\include\pralka.h
+	<Obiekt.h>
+
+1464038240 d:\jacek\nauka_c++\sterownik\include\telewizor.h
+	<Obiekt.h>
+
+1464039124 source:d:\jacek\nauka_c++\sterownik\src\telewizor.cpp
+	"Telewizor.h"
 

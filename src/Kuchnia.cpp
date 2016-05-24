@@ -21,7 +21,7 @@ Kuchnia::Kuchnia(string n, float t, float c, float w)
 
 Kuchnia::~Kuchnia()
 {
-    //dtor
+    cout<<"Usunieto kuchnie: "<<name<<endl;
 }
 
 void Kuchnia::przedstaw_sie()

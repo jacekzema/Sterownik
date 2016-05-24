@@ -23,10 +23,12 @@ void Interfejs::co_chcesz_zrobic()
 	cout << "Co chcesz zrobic? Nacisnij odpowiedni przycisk" << endl;
     cout << "---------------------------------------------------------" << endl;
 	cout << "1. Dodaj pomieszczenie" << endl;
-	cout << "2. Dodaj obiekt w pomieszczeniu" << endl;
-	cout << "3. Pokaz informacje(temperature,cisnienie,wilgotnosc)" << endl;
-	cout << "4. Sprawdz obiekty w pomieszczeniach" << endl;
-    cout << "5. Wylacz wszystkie urzadzenia!" << endl;
+	cout << "2. Usun pomieszczenie" << endl;
+	cout << "3. Dodaj obiekt w pomieszczeniu" << endl;
+	cout << "4. Usun obiekt w pomieszczeniu" << endl;
+	cout << "5. Pokaz informacje(temperature,cisnienie,wilgotnosc)" << endl;
+	cout << "6. Sprawdz obiekty w pomieszczeniach" << endl;
+    cout << "7. Wylacz wszystkie urzadzenia!" << endl;
     cout << "---------------------------------------------------------" << endl;
 
 	s = _getch();
@@ -40,21 +42,30 @@ void Interfejs::co_chcesz_zrobic()
 
 	case '2':
 		system("cls");
-		dodaj_obiekt();
-
+		usun_pomieszczenie();
 		break;
 
 	case '3':
 		system("cls");
-		pokaz_pomieszczenia();
+		dodaj_obiekt();
 		break;
 
 	case '4':
         system("cls");
+        usun_obiekt();
+		break;
+
+	case '5':
+        system("cls");
+	    pokaz_pomieszczenia();
+		break;
+
+    case '6':
+        system("cls");
 	    pokaz_obiekty_w_pomieszczeniach();
 		break;
 
-    case '5':
+    case '7':
         system("cls");
 	    wylacz_all();
 		break;
@@ -188,6 +199,166 @@ void Interfejs::dodaj_obiekt()
 
     }
 
+void Interfejs::usun_obiekt()
+{
+   while(pomieszczenia.size()==0)
+    {
+        cout<<"Nie ma pomieszczen, wiec nie ma obiektow!"<<endl;
+        cout<<"Nacisnij klawisz by kontynuowac"<<endl;
+        _getch();
+        system("cls");
+        co_chcesz_zrobic();
+    }
+
+    string znak;
+    unsigned int liczba;
+    unsigned int i;
+    unsigned int x;
+    cout << "---------------------------------------------------------" << endl;
+    cout <<"Gdzie chcesz usunac obiekt?"<<endl;
+    cout << "---------------------------------------------------------" << endl;
+
+    for(i=0;i<pomieszczenia.size();i++)
+    {
+        cout<<i+1<<".";
+        pomieszczenia.at(i) -> przedstaw_sie();
+    }
+
+    cout<<i+1<<".";
+    cout<<"Wroc do poprzedniego menu"<<endl;
+    cout << "---------------------------------------------------------" << endl;
+    cin >> znak;
+    cout << "---------------------------------------------------------" << endl;
+    liczba=atoi(znak.c_str());
+
+    if((liczba-1)== pomieszczenia.size())
+    {
+        system("cls");
+        co_chcesz_zrobic();
+    }
+
+    if((liczba-1) >= pomieszczenia.size())
+    {
+        cerr<<"Nie ma takiego obiektu!"<<endl;
+    }
+
+    else
+    {
+
+        for(x=0;x<pomieszczenia.at(liczba-1)->obiekty.size();x++)
+        {
+            cout<<x+1<<".";
+            pomieszczenia.at(liczba-1)->obiekty.at(x) -> pokaz_mnie();
+
+        }
+    }
+
+     cout << "---------------------------------------------------------" << endl;
+        cout<<"Jesli chcesz usunac obiekt, wybierz odpowiedni numer"<<endl;
+        cout<<"W przeciwnym wypadku wcisnij: "<< pomieszczenia.at(liczba-1)->obiekty.size()+1 <<endl;
+        cout << "---------------------------------------------------------" << endl;
+
+        string znak1;
+        unsigned int liczba1;
+        cin >> znak1;
+        liczba1=atoi(znak1.c_str());
+
+            if((liczba1-1) ==  pomieszczenia.at(liczba-1)->obiekty.size())
+            {
+                cout<<""<<endl;
+                cout << "Aby przejsc dalej, nacisnij dolowny klawisz" << endl;
+                _getch();
+                system("cls");
+                co_chcesz_zrobic();
+            }
+
+            if((liczba1-1) >=  pomieszczenia.at(liczba-1)->obiekty.size())
+            {
+                cerr<<"Nie ma takiego obiektu!"<<endl;
+            }
+
+            else
+                delete pomieszczenia.at(liczba-1)->obiekty.at(liczba1-1);
+                pomieszczenia.at(liczba-1)->obiekty.erase(pomieszczenia.at(liczba-1)->obiekty.begin() + liczba1 -1);
+
+
+                //vector<Pomieszczenie*>::iterator it=(pomieszczenia.begin()+ liczba - 1);
+                //(*it) -> vector<Obiekt*>::iterator bb=obiekty.begin()+liczba1-1 ;      //iterator na trzeci element
+
+                //   (*it)->vector<Obiekt*>::iterator bb=obiekty.begin()+liczba1-1;
+                //      pomieszczenia.erase(pomieszczenia.begin()+liczba-1);
+
+
+
+                 //pomieszczenia.at(liczba-1)->obiekty.erase(it);
+                //pomieszczenia.erase(pomieszczenia.begin()+liczba-1);
+
+               // pomieszczenia.at(liczba-1)->obiekty.at(liczba1-1)->obiekty.erase(obiekty.begin()+liczba-1));
+
+
+    cout << "---------------------------------------------------------" << endl;
+    co_chcesz_zrobic();
+
+
+
+
+        //pomieszczenia.at(liczba-1)->obiekty.at(0)->pokaz_parametry();
+
+    }
+
+
+void Interfejs::usun_pomieszczenie()
+{
+     while(pomieszczenia.size()==0)
+    {
+        cout<<"Nie ma pomieszczen, wiec nie ma co usuwac!"<<endl;
+        cout<<"Nacisnij klawisz by kontynuowac"<<endl;
+        _getch();
+        system("cls");
+        co_chcesz_zrobic();
+    }
+
+    string znak;
+    unsigned int liczba;
+    unsigned int i;
+    cout << "---------------------------------------------------------" << endl;
+    cout <<"Jakie pomieszczenie chcesz usunac?"<<endl;
+    cout << "---------------------------------------------------------" << endl;
+    for(i=0;i<pomieszczenia.size();i++)
+    {
+        cout<<i+1<<".";
+        pomieszczenia.at(i) -> przedstaw_sie();
+    }
+
+    cout<<i+1<<".";
+    cout<<"Wroc do poprzedniego menu"<<endl;
+    cout << "---------------------------------------------------------" << endl;
+    cin >> znak;
+    cout << "---------------------------------------------------------" << endl;
+    liczba=atoi(znak.c_str());
+
+    if((liczba-1)== pomieszczenia.size())
+    {
+        system("cls");
+        co_chcesz_zrobic();
+    }
+
+    if((liczba-1) >= pomieszczenia.size())
+    {
+        cerr<<"Nie ma takiego obiektu!"<<endl;
+    }
+
+    else
+    {
+      delete pomieszczenia.at(liczba-1);
+      pomieszczenia.erase(pomieszczenia.begin()+liczba-1);
+
+    }
+    co_chcesz_zrobic();
+    return;
+
+
+}
 
 void Interfejs::pokaz_pomieszczenia()
 {

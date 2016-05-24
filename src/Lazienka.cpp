@@ -21,7 +21,7 @@ Lazienka::Lazienka(string n, float t, float c , float w)
 
 Lazienka::~Lazienka()
 {
-    //dtor
+    cout<<"Usunieto lazienke: "<<name<<endl;
 }
 
 void Lazienka::przedstaw_sie()

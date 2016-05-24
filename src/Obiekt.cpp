@@ -8,6 +8,7 @@ Obiekt::Obiekt()
 
 Obiekt::~Obiekt()
 {
-    //dtor
+    cout<<"Usunieto obiekt "<<endl;
+
 }
 

@@ -21,7 +21,7 @@ Sypialnia::Sypialnia(string n, float t, float c, float w)
 
 Sypialnia::~Sypialnia()
 {
-    //dtor
+    cout<<"Usunieto sypialnie w: "<<name<<endl;
 }
 
 void Sypialnia::przedstaw_sie()
